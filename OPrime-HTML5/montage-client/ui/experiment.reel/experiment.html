@@ -23,6 +23,16 @@
             }
         },
 
+        "currentResponse": {
+            "prototype": "ui/response.reel",
+            "properties": {
+                "element": {"#": "response"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.currentResponse"}
+            }
+        },
+
         "toggleLanguage": {
             "prototype": "montage/ui/text.reel",
             "properties": {
@@ -48,6 +58,7 @@
             <div data-montage-id="toggleLanguage">
                 Change Stimuli Language
             </div>
+            <div data-montage-id="response"></div>
         </footer>
 
     </div>

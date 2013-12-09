@@ -20,6 +20,34 @@
             "bindings": {
                 "src": {"<-": "@owner.primeImage"}
             }
+        },
+
+        "currentResponse": {
+            "prototype": "ui/response.reel",
+            "properties": {
+                "element": {"#": "response"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.responses[]"}
+            }
+        },
+        "items": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": { "#": "items" }
+            },
+            "bindings": {
+                "content": { "<-": "@owner.myListProperty" }
+            }
+        },
+        "item": {
+            "prototype": "ui/response.reel",
+            "properties": {
+                "element": { "#": "item" }
+            },
+            "bindings": {
+                "value": { "<-": "@items.objectAtCurrentIteration" }
+            }
         }
 
     }
@@ -30,6 +58,11 @@
         <div class="Stimulus-prime-image-area">
             <img data-montage-id="visualPrime" class="Stimulus-prime-image" src="">
         </div>
+
+        <div data-montage-id="response"></div>
+        <ul data-montage-id="items">
+            <li data-montage-id="item"></li>
+        </ul>
     </div>
 </body>
 </html>
