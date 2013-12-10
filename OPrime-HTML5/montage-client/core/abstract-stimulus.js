@@ -38,31 +38,5 @@ exports.AbstractStimulus = Component.specialize( /** @lends Stimulus# */ {
 		value: null
 	},
 
-	handleMousedown: {
-		value: function(e) {
-			console.log("mousedown parent", e);
-		}
-	},
-
-	captureMousedown: {
-		value: function(e) {
-			console.log("mousedown captue parent", e);
-		}
-	},
-
-	enterDocument: {
-		value: function(e) {
-			console.log("enterDocument");
-			// this.element.addEventListener("mousedown", this, false);
-
-			for (var i in this.templateObjects) {
-				if (this.templateObjects[i].classList && this.templateObjects[i].classList.contains("Stimulus-record-touch-response")) {
-					this.templateObjects[i].element.addEventListener("mousedown", this, false);
-					// this.templateObjects[i].element.addEventListener("touchend", this, false);
-					// this.templateObjects[i].element.addEventListener("touchcancel", this, false);
-				}
-			}
-		}
-	}
 
 });

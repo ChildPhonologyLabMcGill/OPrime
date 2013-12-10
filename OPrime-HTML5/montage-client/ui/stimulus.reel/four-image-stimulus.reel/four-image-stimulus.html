@@ -22,22 +22,26 @@
             }
         },
 
-        "chooseImage1": {
+        "foo": {
             "prototype": "digit/ui/image.reel",
             "properties": {
-                "element": {"#": "chooseImage1"},
+                "element": {"#": "foo"},
                 "crossOrigin": null,
                 "src": "http://th03.deviantart.net/fs70/PRE/f/2012/274/5/0/da_fuk__applejack_by_reallyunimportant-d5gh1zz.png"
             }
         },
 
-        "chooseImage2": {
+        "bar": {
             "prototype": "digit/ui/image.reel",
             "properties": {
-                "element": {"#": "chooseImage2"},
+                "element": {"#": "bar"},
                 "crossOrigin": null,
                 "src": "http://fc06.deviantart.net/fs71/f/2013/076/4/a/_vector___svg__go_home_berry__you_are_sober__by_tritebristle-d5yc4zh.svg"
-            }
+            },
+            "listeners": [{
+                "type": "mousedown",
+                "listener": {"@": "owner"}
+            }]
         },
 
         "chooseImage3": {
@@ -63,14 +67,14 @@
 </head>
 <body>
     <div data-montage-id="fourImageStimulus" class="FourImageStimulus Main-content-container">
-     <div class="Stimulus-prime-image-area">
-         <img data-montage-id="visualPrime" class="Stimulus-prime-image" src="">
-     </div>
+       <div class="Stimulus-prime-image-area">
+           <img data-montage-id="visualPrime" class="Stimulus-prime-image" src="">
+       </div>
 
-     <div class="Stimulus-content-left">
+       <div class="Stimulus-content-left">
         <div class="Stimulus-choose-area Stimulus-touchable">
-            <img data-montage-id="chooseImage1" class="Stimulus-choose-image Stimulus-record-touch-response" src="">
-            <img data-montage-id="chooseImage2" class="Stimulus-choose-image Stimulus-record-touch-response" src="">
+            <img data-montage-id="foo" class="Stimulus-choose-image Stimulus-record-touch-response" src="">
+            <img data-montage-id="bar" class="Stimulus-choose-image Stimulus-record-touch-response" src="">
             <img data-montage-id="chooseImage3" class="Stimulus-choose-image Stimulus-record-touch-response" src="">
             <img data-montage-id="chooseImage4" class="Stimulus-choose-image Stimulus-record-touch-response" src="">
         </div>
