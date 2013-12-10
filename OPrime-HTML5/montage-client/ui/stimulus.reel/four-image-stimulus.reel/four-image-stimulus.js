@@ -17,27 +17,50 @@ exports.FourImageStimulus = AbstractStimulus.specialize( /** @lends FourImageSti
 		}
 	},
 
-	handleChooseImage1Mousedown: {
+	handleMousedown: {
 		value: function(e) {
-			console.log("mousedown chooseImage1 child", e);
+			console.log("mousedown child", e);
 		}
 	},
 
-	captureAction: {
+	handleFooMousedown: {
+		value: function(e) {
+			console.log("mousedown Foo js", e);
+		}
+	},
+
+	handleBarMousedown: {
+		value: function(e) {
+			console.log("mousedown Bar serialization", e);
+		}
+	},
+
+	captureBarMousedown: {
+		value: function(e) {
+			console.log("mousedown capture Bar serialization", e);
+		}
+	},
+
+	captureMousedown: {
 		value: function(e) {
 			console.log("mousedown captue child", e);
 		}
 	},
 
-	handleHover: {
+	enterDocument: {
 		value: function(e) {
-			console.log("hover child", e);
-		}
-	},
+			console.log("enterDocument");
+			// this.element.addEventListener("mousedown", this, false);
+					this.templateObjects["foo"].element.addEventListener("mousedown", this, false);
 
-	captureHover: {
-		value: function(e) {
-			console.log("hover captue child", e);
+			// for (var i in this.templateObjects) {
+			// 		console.log(this.templateObjects[i]);
+			// 	if (this.templateObjects[i].classList && this.templateObjects[i].classList.contains("Stimulus-record-touch-response")) {
+			// 		// this.templateObjects[i].element.addEventListener("touchend", this, false);
+			// 		// this.templateObjects[i].element.addEventListener("touchcancel", this, false);
+			// 	}
+			// }
 		}
 	}
+
 });

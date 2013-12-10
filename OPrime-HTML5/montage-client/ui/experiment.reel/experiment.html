@@ -17,19 +17,9 @@
         },
 
         "currentStimulus": {
-            "prototype": "ui/stimulus.reel/one-image-stimulus.reel",
+            "prototype": "ui/stimulus.reel/four-image-stimulus.reel",
             "properties": {
                 "element": {"#": "stimulus"}
-            }
-        },
-
-        "currentResponse": {
-            "prototype": "ui/response.reel",
-            "properties": {
-                "element": {"#": "response"}
-            },
-            "bindings": {
-                "value": {"<-": "@owner.currentResponse"}
             }
         },
 
@@ -37,6 +27,26 @@
             "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "toggleLanguage"}
+            }
+        },
+
+        "responses": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "responses"}
+            },
+            "bindings": {
+                "contentController": {"<-": "@currentStimulus.rangeController"}
+            }
+        },
+
+        "response": {
+            "prototype": "ui/response.reel",
+            "properties": {
+                "element": {"#": "response"}
+            },
+            "bindings": {
+                "json": {"<-": "@responses.objectAtCurrentIteration"}
             }
         }
     }
@@ -58,7 +68,9 @@
             <div data-montage-id="toggleLanguage">
                 Change Stimuli Language
             </div>
-            <div data-montage-id="response"></div>
+            <ul data-montage-id="responses">
+                <li data-montage-id="response"></li>
+            </ul>
         </footer>
 
     </div>
