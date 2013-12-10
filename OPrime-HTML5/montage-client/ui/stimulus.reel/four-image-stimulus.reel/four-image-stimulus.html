@@ -28,7 +28,11 @@
                 "element": {"#": "chooseImage1"},
                 "crossOrigin": null,
                 "src": "http://th03.deviantart.net/fs70/PRE/f/2012/274/5/0/da_fuk__applejack_by_reallyunimportant-d5gh1zz.png"
-            }
+            },
+            "listeners": [{
+                "type": "mousedown",
+                "listener": {"@": "owner"}
+            }]
         },
 
         "chooseImage2": {
@@ -37,7 +41,11 @@
                 "element": {"#": "chooseImage2"},
                 "crossOrigin": null,
                 "src": "http://fc06.deviantart.net/fs71/f/2013/076/4/a/_vector___svg__go_home_berry__you_are_sober__by_tritebristle-d5yc4zh.svg"
-            }
+            },
+            "listeners": [{
+                "type": "action",
+                "listener": {"@": "owner"}
+            }]
         },
 
         "chooseImage3": {
@@ -46,7 +54,12 @@
                 "element": {"#": "chooseImage3"},
                 "crossOrigin": null,
                 "src": "http://th06.deviantart.net/fs71/PRE/f/2013/025/6/7/moustache_pinkie_pie_by_silentmatten-d5qfrai.png"
-            }
+            },
+            "listeners": [{
+                "type": "mousedown",
+                "listener": {"@": "owner"},
+                "capture": true
+            }]
         },
 
         "chooseImage4": {
@@ -55,7 +68,11 @@
                 "element": {"#": "chooseImage4"},
                 "crossOrigin": null,
                 "src": "http://th01.deviantart.net/fs70/PRE/f/2012/291/0/f/annoyed_smart_cookie_by_silentmatten-d5i7448.png"
-            }
+            },
+            "listeners": [{
+                "type": "hover",
+                "listener": {"@": "owner"}
+            }]
         }
 
     }
@@ -63,11 +80,11 @@
 </head>
 <body>
     <div data-montage-id="fourImageStimulus" class="FourImageStimulus Main-content-container">
-     <div class="Stimulus-prime-image-area">
-         <img data-montage-id="visualPrime" class="Stimulus-prime-image" src="">
-     </div>
+       <div class="Stimulus-prime-image-area">
+           <img data-montage-id="visualPrime" class="Stimulus-prime-image" src="">
+       </div>
 
-     <div class="Stimulus-content-left">
+       <div class="Stimulus-content-left">
         <div class="Stimulus-choose-area Stimulus-touchable">
             <img data-montage-id="chooseImage1" class="Stimulus-choose-image" src="">
             <img data-montage-id="chooseImage2" class="Stimulus-choose-image" src="">
